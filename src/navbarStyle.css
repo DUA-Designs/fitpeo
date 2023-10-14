@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.Navbaritems{
+   
+    background-color: saddlebrown;
+    
+    width:100vw;
+   
+    
+    
+     
+}
+.nav-menu{
+    list-style-type:none;
+    display: flex;
+    width: 50%;
+    margin-left:50%;
+    height:50px;
+  
+   justify-content: space-around;
+   align-items: center;
+}
+
+.nav-menu li{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    align-items: center;
+   
+   
+     
+}
+.nav-menu li:hover{
+  background-color:rgba(255, 232, 127, 0.685);
+  
+ 
+}
+ 
+h1{
+  color: cornflowerblue;
+  
+}
+
+
