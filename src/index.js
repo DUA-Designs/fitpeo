@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
- 
+ import "./fitpeo/media.css"
 import reportWebVitals from './reportWebVitals';
  import "./fitpeo/fit.css"
  

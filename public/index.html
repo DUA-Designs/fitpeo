@@ -28,7 +28,7 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body onload="handleEvent()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -41,5 +41,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      function handleEvent( ){
+        let arr=["bar1","bar2","bar3","bar4","bar5","bar6","bar7","bar8","bar9","bar10","bar11","bar12"];
+        for(let i=0;i<arr.length;i++){
+            let r=Math.random();
+            if(r<0.1){
+                r*=10;
+            }
+           let x=Math.floor(r*25);
+            
+           document.getElementById(arr[i]).style.height=x+"vh";
+        }
+        let m=new Date();
+        let mon=m.getMonth();
+       
+        document.getElementById(arr[mon]).style.opacity="initial";
+        
+     
+
+    }
+    </script>
   </body>
 </html>

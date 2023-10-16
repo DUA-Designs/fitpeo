@@ -1,7 +1,7 @@
 import React from "react";
 import Mainelement from "./main";
 const menu=[
-    {title:"Dashboard",icon:<i class="fa-solid fa-gear"></i>},
+    {title:"Dashboard",icon:<i class="fa-solid fa-gauge-high"></i>},
     {title:"Product",icon:<i class="fa-solid fa-cube"></i>},{
         title:"Customers",icon:<i class="fa-solid fa-address-book"></i>
     },{
@@ -16,11 +16,13 @@ const menu=[
 class Fitpeo extends React.Component{
     constructor(){
         super();
-        this.state={title:"Dashboard",icon:<i class="fa-solid fa-gear"></i>}
+        this.state={title:"Dashboard",icon:<i class="fa-solid fa-bars-staggered"></i>}
          this.display=this.display.bind(this);
     }
-      display(index){
-        console.log(document.getElementById("topguy").innerHTML);
+      display(k,event){
+        
+         
+        this.setState({title:menu[k].title });
         
         
          
@@ -36,9 +38,9 @@ class Fitpeo extends React.Component{
         return (<>
         <div id="layout"><nav>
             <h1 id="topguy"><span>{this.state.icon}</span><span id="tit">{this.state.title}</span>   </h1>
-            <ul>{menu.map((item,index)=><li   onClick={this.display.bind(index) }  ><span >{item.icon}</span> <span>{item.title}</span> <span>{" >"}</span></li>)}</ul>
+            <ul>{menu.map((item,index)=><li   onClick={(event)=>this.display(index,event) } key={index}  ><span >{item.icon}</span> <span  >{item.title}</span> <span>{" >"}</span></li>)}</ul>
             <div id="manager">
-                 <div><img src="" alt="proPic"/></div>
+                 <div id="pic"> <i class="fa-solid fa-user-tie"></i></div>
                  <div id="details"><h3>Evaria</h3>
                  <p>Project Manager</p></div>
             </div>
